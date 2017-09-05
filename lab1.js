@@ -68,18 +68,17 @@ function occurrencesOfSubstring(given, substring){
 
 function randomizeSentences(paragraph){
     if(typeof paragraph != 'string') throw 'unexpected input data type';
-    let arr = paragraph.split(/[\.!?]+/);
-    console.log(arr);
+    
+    let arr = paragraph.match(/[^\.!\?]+[\.!\?]+/g);
+    arr[arr.length - 1] += " ";
     for(let i = arr.length - 1; i >= 0; i-- ){
         let j = Math.floor(Math.random() * (i));
         let temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    //return arr;
+    return arr.join('');
 }
 
 let string = "Hello, world! I am a paragraph. You can tell that I am a paragraph because there are multiple sentences that are split up by punctuation marks. Grammar can be funny, so I will only put in paragraphs with periods, exclamation marks, and question marks -- no quotations.";
 console.log(randomizeSentences(string));
-
-ss
