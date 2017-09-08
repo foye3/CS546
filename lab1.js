@@ -25,12 +25,12 @@ function sayHelloTo(firstName, lastName, tittle){
     }else if(sayHelloTo.arguments.length === 1){
         res = `Hello, ${firstName}!`
     }else{
-        throw 'A string describing an error';
+        throw 'unexpected input data type';
     }
     console.log(res);
 }
 
-//sayHelloTo();
+// sayHelloTo();
 // sayHelloTo('Fan');
 // sayHelloTo('Fan','Zhang');
 // sayHelloTo('Fan','Zhang','Mr.');
@@ -81,4 +81,4 @@ function randomizeSentences(paragraph){
 }
 
 let string = "Hello, world! I am a paragraph. You can tell that I am a paragraph because there are multiple sentences that are split up by punctuation marks. Grammar can be funny, so I will only put in paragraphs with periods, exclamation marks, and question marks -- no quotations.";
-console.log(randomizeSentences(string));
+//console.log(randomizeSentences(string));
