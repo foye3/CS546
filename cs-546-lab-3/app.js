@@ -21,6 +21,7 @@ async function main(i) {
             filestr = textMetrics.simplify(filestr);
             await fileData.saveStringToFile(`chapter${i}.debug.txt`,filestr);
             let result = textMetrics.createMetrics(filestr);
+            console.log(result);
             await fileData.saveJSONToFile(`chapter${i}.result.json`,result);
         } catch (error) {
             console.log(error);   
@@ -32,5 +33,7 @@ async function main(i) {
 main(1);
 main(2);
 main(3);
+
+
 
 
