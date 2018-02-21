@@ -3,14 +3,14 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #f3f3f3;
+    background-color: #4fb476;
 }
 
 
 li a {
     float: left;
     display: block;
-    color: #666;
+    color: rgb(202, 52, 52);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
